@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Hide scrollbars during boot animation */
+  }
+  .boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bootAnimation 2s ease-in-out forwards;
+  }
+  @keyframes bootAnimation {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+  }
+  .desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    overflow: auto; /* Enable scrollbars for the desktop */
+  }
+  .icon {
+    position: absolute;
+    padding: 10px;
+    background: #fff;
+    cursor: pointer;
+  }
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .icon:hover {
+    background: #ccc;
+  }
+  .start-menu {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 200px;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    z-index: 1000;
+  }
+  .start-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .start-menu li {
+    margin-bottom: 5px;
+  }
+  .start-menu li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s;
+  }
+  .start-menu li a:hover {
+    background: #f0f0f0;
+  }
+  .start-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #0078d4;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  .browser-window {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 800px;
+    height: 600px;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 1000;
+  }
+  .browser-header {
+    background: #0078d4;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  .browser-content {
+    height: 500px;
+    overflow-y: auto;
+    padding: 0 10px;
+  }
+  .address-bar {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 5px;
+  }
+  .address-bar input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: none;
+  }
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .navigation-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background: #ff0000;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+  }
